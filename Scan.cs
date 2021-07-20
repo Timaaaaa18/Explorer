@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
@@ -24,7 +25,7 @@ namespace WinFormsApp1
             }
         }
 
-        public static string[] GetFiles(string path)
+        public static string[] GetFiles(string path, object selectedItem)
         {
             try
             {
@@ -34,6 +35,20 @@ namespace WinFormsApp1
             catch (System.IO.IOException)
             {
                 //File.Open(currentPath, FileMode.Open);
+                return files;
+            }
+            catch (System.UnauthorizedAccessException)
+            {
+                MessageBox.Show("lock access",caption:"Warning");
+                
+                if (Form1.pathArray.Length <= 1)
+                {
+
+                }
+                else
+                {
+                    Array.Resize(ref Form1.pathArray, Form1.pathArray.Length - 1);
+                }
                 return files;
             }
         }

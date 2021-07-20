@@ -8,9 +8,7 @@ namespace WinFormsApp1
     {
         static private string selectedItem;
         static private string currentPath;
-        //static private string currentPath;
-        static private string[] pathArray = new string[1];
-
+        static public string[] pathArray = new string[1];
 
         public Form1()
         {
@@ -158,7 +156,6 @@ namespace WinFormsApp1
         {
             SecondTree.Items.Clear();
             Information.Text = currentPath = Convert.ToString(MainTree.SelectedItem);
-            //Array.Clear(pathArray, 0, pathArray.Length);
             Array.Resize(ref pathArray, 1);
             pathArray[0] = currentPath;
             AddDirectoriesAndFiles(Convert.ToString(currentPath));
@@ -175,10 +172,11 @@ namespace WinFormsApp1
                     SecondTree.Items.Add(Path.GetFileName(item));
                 }
 
-                foreach (var item in FileOperations.GetFiles(path))
+                foreach (var item in FileOperations.GetFiles(path, SecondTree.SelectedItem))
                 {
                     SecondTree.Items.Add(Path.GetFileName(item));
                 }
+
 
             }
             
@@ -203,15 +201,13 @@ namespace WinFormsApp1
         private void SecondTree_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
-            Information.Text = currentPath + @"\" + Convert.ToString(SecondTree.SelectedItem);
+            Information.Text = pathArray[pathArray.Length - 1] + @"\" + Convert.ToString(SecondTree.SelectedItem);
             currentPath = Information.Text;
 
             Array.Resize(ref pathArray, pathArray.Length + 1);
             pathArray[pathArray.Length - 1] = currentPath;
-
-            //selectedItem = Convert.ToString(SecondTree.SelectedItem);
             SecondTree.Items.Clear();
-            AddDirectoriesAndFiles(Convert.ToString(currentPath));
+            AddDirectoriesAndFiles(Convert.ToString(pathArray[pathArray.Length - 1]));
         }
 
         private void ArrowLeft_Click(object sender, EventArgs e)
@@ -224,6 +220,7 @@ namespace WinFormsApp1
             {
                 Array.Resize(ref pathArray, pathArray.Length - 1);
                 currentPath = pathArray[pathArray.Length - 1];
+                Information.Text = currentPath;
             }
             
             SecondTree.Items.Clear();
