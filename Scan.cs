@@ -20,7 +20,7 @@ namespace WinFormsApp1
             }
             catch (Exception)
             {
-                //File.Open(currentPath, FileMode.Open);
+                Array.Resize(ref Form1.pathArray, Form1.pathArray.Length - 1);
                 return directories;
             }
         }
@@ -34,7 +34,6 @@ namespace WinFormsApp1
             }
             catch (System.IO.IOException)
             {
-                //File.Open(currentPath, FileMode.Open);
                 return files;
             }
             catch (System.UnauthorizedAccessException)

@@ -37,7 +37,7 @@ namespace WinFormsApp1
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Cursor = System.Windows.Forms.Cursors.SizeWE;
+            this.splitContainer1.Cursor = System.Windows.Forms.Cursors.VSplit;
             this.splitContainer1.Location = new System.Drawing.Point(0, 49);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -84,6 +84,7 @@ namespace WinFormsApp1
             this.SecondTree.ScrollAlwaysVisible = true;
             this.SecondTree.Size = new System.Drawing.Size(1247, 546);
             this.SecondTree.TabIndex = 0;
+            this.SecondTree.SelectedIndexChanged += new System.EventHandler(this.SecondTree_SelectedIndexChanged);
             this.SecondTree.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.SecondTree_MouseDoubleClick);
             // 
             // button1
@@ -225,6 +226,11 @@ namespace WinFormsApp1
             
             SecondTree.Items.Clear();
             AddDirectoriesAndFiles(currentPath);
+        }
+
+        private void SecondTree_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
