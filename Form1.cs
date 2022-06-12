@@ -12,12 +12,7 @@ namespace WinFormsApp1
 
         public Form1()
         {
-            InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            InitializeComponent();            
         }
 
         private void InitializeComponent()
@@ -70,7 +65,6 @@ namespace WinFormsApp1
             this.MainTree.Size = new System.Drawing.Size(192, 548);
             this.MainTree.TabIndex = 2;
             this.MainTree.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MainTree_MouseClick);
-            this.MainTree.SelectedIndexChanged += new System.EventHandler(this.Form1_Load);
             // 
             // SecondTree
             // 
@@ -84,7 +78,6 @@ namespace WinFormsApp1
             this.SecondTree.ScrollAlwaysVisible = true;
             this.SecondTree.Size = new System.Drawing.Size(1247, 546);
             this.SecondTree.TabIndex = 0;
-            this.SecondTree.SelectedIndexChanged += new System.EventHandler(this.SecondTree_SelectedIndexChanged);
             this.SecondTree.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.SecondTree_MouseDoubleClick);
             // 
             // button1
@@ -98,7 +91,7 @@ namespace WinFormsApp1
             this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.updateButton_MouseClick);
             // 
             // Information
             // 
@@ -148,11 +141,6 @@ namespace WinFormsApp1
 
         }
 
-        private void MainTree_SelectedIndexChanged(object sender, EventArgs e)
-        {
-                        
-        }
-
         private void MainTree_MouseClick(object sender, MouseEventArgs e)
         {
             SecondTree.Items.Clear();
@@ -167,41 +155,30 @@ namespace WinFormsApp1
         {
             if (path != "" && path != null)
             {
-
-                foreach (var item in FileOperations.GetDirectories(path))
+                foreach (var item in Scan.GetDirectories(path))
                 {
                     SecondTree.Items.Add(Path.GetFileName(item));
                 }
 
-                foreach (var item in FileOperations.GetFiles(path, SecondTree.SelectedItem))
+                foreach (var item in Scan.GetFiles(path, SecondTree.SelectedItem))
                 {
                     SecondTree.Items.Add(Path.GetFileName(item));
                 }
-
-
-            }
-            
+            }            
         }
 
-        private void button1_MouseClick(object sender, MouseEventArgs e)
+        private void updateButton_MouseClick(object sender, MouseEventArgs e)
         {
             MainTree.Items.Clear();
             
-            foreach (var item in FileOperations.GetDrives())
+            foreach (var item in Scan.GetDrives())
             {
                 MainTree.Items.Add(item);
-            }
-            
-        }
-
-        private void SecondTree_MouseClick(object sender, MouseEventArgs e)
-        {
-            
+            }   
         }
 
         private void SecondTree_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
             Information.Text = pathArray[pathArray.Length - 1] + @"\" + Convert.ToString(SecondTree.SelectedItem);
             currentPath = Information.Text;
 
@@ -213,24 +190,14 @@ namespace WinFormsApp1
 
         private void ArrowLeft_Click(object sender, EventArgs e)
         {
-            if (pathArray.Length <= 1)
-            {
-               
-            }
-            else
+            if (pathArray.Length > 1)
             {
                 Array.Resize(ref pathArray, pathArray.Length - 1);
                 currentPath = pathArray[pathArray.Length - 1];
                 Information.Text = currentPath;
-            }
-            
+            }            
             SecondTree.Items.Clear();
             AddDirectoriesAndFiles(currentPath);
-        }
-
-        private void SecondTree_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

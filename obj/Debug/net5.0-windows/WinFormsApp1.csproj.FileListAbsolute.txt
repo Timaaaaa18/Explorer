@@ -17,3 +17,41 @@ A:\VS Projects\Explorer\obj\Debug\net5.0-windows\Explorer.dll
 A:\VS Projects\Explorer\obj\Debug\net5.0-windows\ref\Explorer.dll
 A:\VS Projects\Explorer\obj\Debug\net5.0-windows\Explorer.pdb
 A:\VS Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.genruntimeconfig.cache
+D:\VS_Projects\Explorer\bin\Debug\net5.0-windows\Explorer.exe
+D:\VS_Projects\Explorer\bin\Debug\net5.0-windows\Explorer.deps.json
+D:\VS_Projects\Explorer\bin\Debug\net5.0-windows\Explorer.runtimeconfig.json
+D:\VS_Projects\Explorer\bin\Debug\net5.0-windows\Explorer.runtimeconfig.dev.json
+D:\VS_Projects\Explorer\bin\Debug\net5.0-windows\Explorer.dll
+D:\VS_Projects\Explorer\bin\Debug\net5.0-windows\ref\Explorer.dll
+D:\VS_Projects\Explorer\bin\Debug\net5.0-windows\Explorer.pdb
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.Form1.resources
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.Properties.Resources.resources
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.AssemblyInfo.cs
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\Explorer.dll
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\ref\Explorer.dll
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\Explorer.pdb
+D:\VS_Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.genruntimeconfig.cache
+D:\C# Projects\Explorer\bin\Debug\net5.0-windows\Explorer.exe
+D:\C# Projects\Explorer\bin\Debug\net5.0-windows\Explorer.deps.json
+D:\C# Projects\Explorer\bin\Debug\net5.0-windows\Explorer.runtimeconfig.json
+D:\C# Projects\Explorer\bin\Debug\net5.0-windows\Explorer.runtimeconfig.dev.json
+D:\C# Projects\Explorer\bin\Debug\net5.0-windows\Explorer.dll
+D:\C# Projects\Explorer\bin\Debug\net5.0-windows\Explorer.pdb
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.Form1.resources
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.Properties.Resources.resources
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.AssemblyInfo.cs
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\Explorer.dll
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\refint\Explorer.dll
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\Explorer.pdb
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\WinFormsApp1.genruntimeconfig.cache
+D:\C# Projects\Explorer\obj\Debug\net5.0-windows\ref\Explorer.dll

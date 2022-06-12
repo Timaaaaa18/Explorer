@@ -1,44 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.IO;
 using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    static class FileOperations
+    static class Scan
     {
-        static string[] directories;
         static string[] files;
 
         public static string[] GetDirectories(string path)
         {
             try
             {
-                directories = Directory.GetDirectories(path);
-                return directories;
+                return Directory.GetDirectories(path);
             }
             catch (Exception)
             {
-                Array.Resize(ref Form1.pathArray, Form1.pathArray.Length - 1);
-                return directories;
+                Array.Resize(ref Form1.pathArray, Form1.pathArray.Length - 1); //TODO: Delete this.
+                return null;
             }
         }
 
-        public static string[] GetFiles(string path, object selectedItem)
+        public static string[] GetFiles(string path, object selectedItem) //TODO: Object?
         {
             try
             {
-                files = Directory.GetFiles(path);
-                return files;
+                return Directory.GetFiles(path);;
             }
-            catch (System.IO.IOException)
+            catch (IOException)
             {
-                return files;
+                return null;
             }
-            catch (System.UnauthorizedAccessException)
+            catch (UnauthorizedAccessException)
             {
-                MessageBox.Show("lock access",caption:"Warning");
+                MessageBox.Show("Access locked", caption:"Warning");
                 
                 if (Form1.pathArray.Length <= 1)
                 {
@@ -48,21 +43,13 @@ namespace WinFormsApp1
                 {
                     Array.Resize(ref Form1.pathArray, Form1.pathArray.Length - 1);
                 }
-                return files;
+                return null;
             }
         }
 
         public static DriveInfo[] GetDrives()
         {
-
-            var files = DriveInfo.GetDrives();
-            return files;
+            return DriveInfo.GetDrives();
         }
-
-        public static void Open()
-        {
-
-        }
-
     }
 }
