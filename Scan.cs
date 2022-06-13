@@ -3,10 +3,11 @@ using System.IO;
 using System.Windows.Forms;
 
 namespace WinFormsApp1
-{
+{   
     static class Scan
     {
-        static string[] files;
+        public delegate void EventHandler(string path);
+        public static event EventHandler Notify;
 
         public static string[] GetDirectories(string path)
         {
@@ -14,35 +15,25 @@ namespace WinFormsApp1
             {
                 return Directory.GetDirectories(path);
             }
-            catch (Exception)
-            {
-                Array.Resize(ref Form1.pathArray, Form1.pathArray.Length - 1); //TODO: Delete this.
-                return null;
-            }
+            catch { return null; }
+            
         }
 
-        public static string[] GetFiles(string path, object selectedItem) //TODO: Object?
-        {
+        public static string[] GetFiles(string path)
+        { 
+
             try
             {
-                return Directory.GetFiles(path);;
+                return Directory.GetFiles(path);
             }
             catch (IOException)
             {
+                Notify?.Invoke(path);
                 return null;
             }
             catch (UnauthorizedAccessException)
             {
-                MessageBox.Show("Access locked", caption:"Warning");
-                
-                if (Form1.pathArray.Length <= 1)
-                {
-
-                }
-                else
-                {
-                    Array.Resize(ref Form1.pathArray, Form1.pathArray.Length - 1);
-                }
+                MessageBox.Show("Access locked", caption: "Warning");
                 return null;
             }
         }

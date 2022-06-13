@@ -58,7 +58,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="UpdateButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAA1pJREFUOE+lVWlIFVEUnrdZbhUpavhcWvW5tFCRJWllqWmbwlCBUWlYPwyE0qJ+
@@ -78,10 +78,10 @@
         wS9g31L9kwtLi9tzlsPwLW4/pylt2x9dVK+ePGkE8RsyPrVtKR/A8gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="ArrowLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ArrowLeftButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAGZJREFUOE/tklEKgCAQRLei8v4XrplE0FqqXcsvHzwwGQakkc7vbDDEYz0so+vx
+        vAAADrwBlbxySQAAAGZJREFUOE/tklEKgCAQRLei8v4XrplE0FqqXcsvHzwwGQakkc7vbDDEYz0so+vx
         VcEIUxldoJsZ5mWUdy74tHOZ1QItYLVAC1i9oIUsqrwJDZBrmCB/GpdwO6+nQhefF6aBd5oisgPa21Xt
         OH7jJwAAAABJRU5ErkJggg==
 </value>

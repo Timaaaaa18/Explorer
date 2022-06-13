@@ -20,12 +20,13 @@ namespace WinFormsApp1
             }
             base.Dispose(disposing);
         }
-        private System.Windows.Forms.Label Information;
-        private System.Windows.Forms.ListBox MainTree;
-        public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.ListBox SecondTree;
+        private System.Windows.Forms.Label PathLabel;
+        private System.Windows.Forms.ListBox LeftListBox;
+        public System.Windows.Forms.Button UpdateButton;
+        public System.Windows.Forms.ListBox RightListBox;
         public System.Windows.Forms.SplitContainer splitContainer1;
-        public System.Windows.Forms.Button ArrowLeft;
+        public System.Windows.Forms.Button ArrowLeftButton;
+        public System.Windows.Forms.Button ArrowRightButton;
     }
 }
 
