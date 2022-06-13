@@ -22,7 +22,6 @@ namespace WinFormsApp1
         }
         private System.Windows.Forms.Label PathLabel;
         private System.Windows.Forms.ListBox LeftListBox;
-        public System.Windows.Forms.Button UpdateButton;
         public System.Windows.Forms.ListBox RightListBox;
         public System.Windows.Forms.SplitContainer splitContainer1;
         public System.Windows.Forms.Button ArrowLeftButton;

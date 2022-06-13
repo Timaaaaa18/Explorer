@@ -58,26 +58,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="UpdateButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAA1pJREFUOE+lVWlIFVEUnrdZbhUpavhcWvW5tFCRJWllqWmbwlCBUWlYPwyE0qJ+
-        jBCCa+p7T+29mVFf0uLLhTY1BX1TlmgbpaTvWXOHogRT+1u22LnjGEZu4QeXmbn33O+c+517zhCTIdlg
-        UIWVWlYG6CykRmtJ9yviMvy1FipQz6VtKrXExOZXeUqmM2B0VBZkeOzvakLZChZ1yWj+C8GgTwSNbHKG
-        5+F7kGCEEXjvCbglnEvIrXHD20iKstueW+2TkHvVUeTBoKhWZUhVX7Qdi9pktDDgWC7UOhltSRv1rWvj
-        9dU+0UU16oii+nUa9kWSnEYcQQvfwGlbJPtoTWjhHW9w1B6g5VLG2CAyL/r1LiV4ljFCj2uZLTEyv3Ex
-        nh8z+BuJ2YyzC2M7JWfQZxUrvHGqQHHgAAXquAzRIIy2aFTgTc6ibr9rfBRFUUpxYQb4Mt37INpBIO4j
-        QA6RkKTMdiqGvyyHYy5kbcdJs1kh2U8JrFlMjtkj3NiqdiznM0HjHzB+iYQRxuZVCjimQxmq3l9Qt0ja
-        My3IQrO3qCMjWEFvBIn7Ce+jImGg7uEhmPzia+o7ItnPCFJvdgJ5UiGqSxMHcO0hNDrLRfDwIbzkQZBk
-        Pzf467hUGcM37C287i5N/TdwIWzNq/NKpgwOBL6MWODZJGMqhOQ3rgANOyC4E9LU3LBe2xIK1TPkr7Mk
-        E1Cj8XApCyYOWDwrhj8bwOWfZ7SeljFoOKiYiyWg8LNxyiEx35WM8B6yZbMvQxwJMkhbpsWOwtvu88uE
-        FgWDOsWmMU4IJTeypBKdjy2964lrFwst7ZkSFBSFM9uLkzq07LqQLuYBEypZ9FHJCgJUS/+2ylcRkv20
-        wBW2wGg9DBdcgB5wP85YrxYXpAhfelT07oYjI0zqw3QfOzOxFU0EaBZXUuPmSFtTQDceutPTjabnm/80
-        Ej8tlwb6NR3Q1boElz8LAYNOcPAVqqcl2NR9FDRaHZ1Vo44qaPD1u9Kxwd5gPali+VbcG6GhNHkburZA
-        M5GLZBhklnkhbo7j95DU3/NwN/GZClboBeIRSNKAnObfgdO3QNIPeg3D87nmppC+09DsPVWL+wcH8254
-        wS9g31L9kwtLi9tzlsPwLW4/pylt2x9dVK+ePGkE8RsyPrVtKR/A8gAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="ArrowLeftButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO

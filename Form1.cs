@@ -7,15 +7,15 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
-        static private string selectedItem;
         static private string currentPath;
         static private string[] pathArray = new string[1];
         static private List<string> pathList = new List<string>();
         
         public Form1()
         {
+            InitializeComponent();
             Scan.Notify += OpenFile;
-            InitializeComponent();            
+            UpdateDrives();
         }
 
         private void InitializeComponent()
@@ -24,7 +24,6 @@ namespace WinFormsApp1
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.LeftListBox = new System.Windows.Forms.ListBox();
             this.RightListBox = new System.Windows.Forms.ListBox();
-            this.UpdateButton = new System.Windows.Forms.Button();
             this.PathLabel = new System.Windows.Forms.Label();
             this.ArrowLeftButton = new System.Windows.Forms.Button();
             this.ArrowRightButton = new System.Windows.Forms.Button();
@@ -84,19 +83,6 @@ namespace WinFormsApp1
             this.RightListBox.TabIndex = 0;
             this.RightListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.RightListBox_MouseDoubleClick);
             // 
-            // UpdateButton
-            // 
-            this.UpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.UpdateButton.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.UpdateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
-            this.UpdateButton.Location = new System.Drawing.Point(72, 0);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(30, 30);
-            this.UpdateButton.TabIndex = 0;
-            this.UpdateButton.UseVisualStyleBackColor = false;
-            this.UpdateButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UpdateButton_MouseClick);
-            // 
             // PathLabel
             // 
             this.PathLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -140,7 +126,6 @@ namespace WinFormsApp1
             this.ClientSize = new System.Drawing.Size(1445, 597);
             this.Controls.Add(this.ArrowRightButton);
             this.Controls.Add(this.ArrowLeftButton);
-            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.PathLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -168,8 +153,7 @@ namespace WinFormsApp1
         }
 
         private void AddDirectoriesAndFiles(string path)
-        {
-            
+        {           
             string[] directories = Scan.GetDirectories(path);
             string[] files = Scan.GetFiles(path);
             RightListBox.Items.Clear();
@@ -190,7 +174,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void UpdateButton_MouseClick(object sender, MouseEventArgs e) //TODO: Remove button, rename method
+        private void UpdateDrives() //TODO: Remove button, rename method
         {
             LeftListBox.Items.Clear();
             
@@ -237,8 +221,7 @@ namespace WinFormsApp1
             var proc = new System.Diagnostics.Process();
             proc.StartInfo.FileName = path;
             proc.StartInfo.UseShellExecute = true;
-            proc.Start();
-        }
-        
+            proc.Start(); //TODO: can`t open .dll 
+        }       
     }
 }
